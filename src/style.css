@@ -61,3 +61,22 @@ main{padding-top:32px}
 
 .minimal-footer{justify-content:flex-end}
 
+
+.minimal-footer{margin-top:32px}.empty-result h2{margin:0}
+
+/* Keep the footer at the bottom of short pages without covering results. */
+.app-shell{min-height:100dvh;display:flex;flex-direction:column}
+.header{flex-shrink:0}
+main{width:100%;flex:1;margin:0 auto;padding-bottom:32px}
+.minimal-footer{margin-top:0;flex-shrink:0}
+.diff-navigation{display:flex;align-items:center;gap:3px;padding-right:10px;margin-right:4px;border-right:1px solid #dce4de}
+.diff-position{min-width:38px;text-align:center;font-variant-numeric:tabular-nums;font-size:11px}
+.diff-navigation button:disabled{opacity:.3;cursor:default}
+.diff-row{scroll-margin:18px}
+.diff-row.active-diff{outline:2px solid #388b60;outline-offset:-2px;position:relative;z-index:1}
+:root:not([data-theme="light"]) .diff-row.active-diff{outline-color:#8dd3aa}
+:root:not([data-theme="light"]) .diff-navigation{border-color:#35453b}
+@media(max-width:650px){.results-heading{flex-wrap:wrap}.result-actions{flex-wrap:wrap}.diff-navigation{gap:4px}}
+
+.diff-scroll{overflow-anchor:none}
+
