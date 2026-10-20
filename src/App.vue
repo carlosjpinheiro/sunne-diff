@@ -55,7 +55,7 @@ const count=t=>t? t.split('\n').length:0
 
 <template>
  <div class="app-shell">
-  <header class="header"><a class="brand" href="./" aria-label="Sunne Diff início"><span class="brand-icon"><img src="/brand-icon.png" alt="" width="36" height="36"></span>sunne<span class="brand-light">diff</span></a><div class="header-controls"><button class="theme-toggle" type="button" role="switch" :aria-checked="theme==='dark'" aria-label="Modo escuro" :title="theme==='dark'?'Ativar modo claro':'Ativar modo escuro'" @click="theme=theme==='dark'?'light':'dark'"><Sun v-if="theme==='dark'" :size="18"/><Moon v-else :size="18"/></button></div></header>
+  <header class="header"><a class="brand" href="./" aria-label="Sunne Diff início"><span class="brand-icon"><img src="/pigeon-icon.png" alt="" width="36" height="36"></span>sunne<span class="brand-light">diff</span></a><div class="header-controls"><button class="theme-toggle" type="button" role="switch" :aria-checked="theme==='dark'" aria-label="Modo escuro" :title="theme==='dark'?'Ativar modo claro':'Ativar modo escuro'" @click="theme=theme==='dark'?'light':'dark'"><Sun v-if="theme==='dark'" :size="18"/><Moon v-else :size="18"/></button></div></header>
   <main @keydown.ctrl.enter.prevent="(!busy && (left || right)) && compare()" @keydown.meta.enter.prevent="(!busy && (left || right)) && compare()">
    <section class="workspace" aria-label="Comparador de textos">
     <div class="workspace-top"><div class="section-title"><FileText :size="18"/> Comparar textos</div><div class="top-actions"><button @click="reset"><RotateCcw :size="14"/> Limpar</button></div></div>
@@ -79,6 +79,7 @@ const count=t=>t? t.split('\n').length:0
   <footer class="minimal-footer"><span>sunne technologies</span></footer>
  </div>
 </template>
+
 
 
 
